@@ -13241,7 +13241,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://gramota.ru/class/coach/punct/45_177&#39;</span><span class="p">)</span>
@@ -13254,7 +13254,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
@@ -13267,7 +13267,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
@@ -13281,7 +13281,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">token</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">regex</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;\w+&#39;</span><span class="p">,</span> <span class="n">text_div</span><span class="o">.</span><span class="n">text</span><span class="p">)]</span>
@@ -13294,7 +13294,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="k">import</span> <span class="n">SnowballStemmer</span>
@@ -13308,7 +13308,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
@@ -13321,7 +13321,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pymystem3</span> <span class="k">import</span> <span class="n">Mystem</span>
@@ -13335,7 +13335,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stem_map</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="n">token</span><span class="p">,</span> <span class="s2">&quot;stem&quot;</span><span class="p">:</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">token</span><span class="p">),</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">idx</span><span class="p">}</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">token</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tokens</span><span class="p">)]</span>
@@ -13348,7 +13348,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">stem_map</span><span class="p">:</span>
@@ -13362,7 +13362,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="s2">&quot;&lt;table&gt;&lt;thead&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Токен&lt;/th&gt;&lt;th&gt;Стем&lt;/th&gt;&lt;/tr&gt;&lt;tbody&gt;&quot;</span>
@@ -13404,7 +13404,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">word_1</span> <span class="ow">in</span> <span class="n">stem_map</span><span class="p">:</span>
@@ -15104,7 +15104,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">word_1</span> <span class="ow">in</span> <span class="n">stem_map</span><span class="p">:</span>
@@ -16227,7 +16227,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">stem_map</span><span class="p">:</span>
@@ -16329,7 +16329,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="k">import</span> <span class="n">stopwords</span>
@@ -16342,7 +16342,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stop_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">&quot;russian&quot;</span><span class="p">)</span>
@@ -16370,10 +16370,43 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;кем&quot;</span> <span class="ow">in</span> <span class="n">stop_words</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;который&quot;</span> <span class="ow">in</span> <span class="n">stop_words</span>
 </pre></div>
 
     </div>
@@ -16406,7 +16439,7 @@ None
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;который&quot;</span> <span class="ow">in</span> <span class="n">stop_words</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;наш&quot;</span> <span class="ow">in</span> <span class="n">stop_words</span>
 </pre></div>
 
     </div>
@@ -16439,7 +16472,7 @@ None
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;наш&quot;</span> <span class="ow">in</span> <span class="n">stop_words</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;сама&quot;</span> <span class="ow">in</span> <span class="n">stop_words</span>
 </pre></div>
 
     </div>
@@ -16472,39 +16505,6 @@ None
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;сама&quot;</span> <span class="ow">in</span> <span class="n">stop_words</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[25]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;свой&quot;</span> <span class="ow">in</span> <span class="n">stop_words</span>
 </pre></div>
 
@@ -16518,7 +16518,7 @@ None
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -16556,7 +16556,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nltk</span> <span class="k">import</span> <span class="n">sent_tokenize</span>
@@ -16564,7 +16564,7 @@ None
 <span class="kn">from</span> <span class="nn">pymystem3</span> <span class="k">import</span> <span class="n">Mystem</span>
 <span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">groupby</span><span class="p">,</span> <span class="n">zip_longest</span><span class="p">,</span> <span class="n">chain</span>
 <span class="n">morph</span> <span class="o">=</span> <span class="n">MorphAnalyzer</span><span class="p">()</span>
-<span class="n">mystem</span> <span class="o">=</span> <span class="n">Mystem</span><span class="p">()</span>
+<span class="n">mystem</span> <span class="o">=</span> <span class="n">Mystem</span><span class="p">(</span><span class="n">sentence_markers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">termcolor</span> <span class="k">import</span> <span class="n">colored</span>
 </pre></div>
 
@@ -16575,7 +16575,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://zona.media/news/2019/09/11/zhukov-expertise&#39;</span><span class="p">)</span>
@@ -16588,7 +16588,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
@@ -16601,7 +16601,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;body &gt; div &gt; section &gt; section:nth-child(1) &gt; section &gt; div &gt; div:nth-child(2) &gt; section&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
@@ -16614,7 +16614,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span>
@@ -16630,7 +16630,7 @@ None
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -16647,10 +16647,10 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">word_re</span> <span class="o">=</span> <span class="n">regex</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;([А-ЯЁа-яё]+(-[А-ЯЁа-яё]+)*)&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">word_re</span> <span class="o">=</span> <span class="n">regex</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(\d+|[А-ЯЁа-яё]+(-[А-ЯЁа-яё]+)*)&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16660,7 +16660,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">normalized_sentences_morphy</span> <span class="o">=</span> <span class="p">[</span>
@@ -16673,7 +16673,7 @@ None
     <span class="ow">in</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 <span class="p">]</span>
 <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">normalized_sentences_morphy</span><span class="p">:</span>
-    <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span>
+    <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &lt;EOS&gt;&#39;</span>
 </pre></div>
 
     </div>
@@ -16683,7 +16683,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">normalized_sentences_mystem</span> <span class="o">=</span> <span class="p">[</span>
@@ -16691,11 +16691,11 @@ None
     <span class="k">for</span> <span class="n">is_period</span><span class="p">,</span> <span class="n">group</span> 
     <span class="ow">in</span> <span class="n">groupby</span><span class="p">(</span>
         <span class="n">mystem</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> 
-        <span class="k">lambda</span> <span class="n">token</span><span class="p">:</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;. &#39;</span><span class="p">)</span> 
+        <span class="k">lambda</span> <span class="n">token</span><span class="p">:</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">s&#39;</span><span class="p">)</span> 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_period</span>
 <span class="p">]</span>
 <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">normalized_sentences_mystem</span><span class="p">:</span>
-    <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span>
+    <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &lt;EOS&gt;&#39;</span>
 </pre></div>
 
     </div>
@@ -16705,7 +16705,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">normalized_sentences_morphy</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">normalized_sentences_mystem</span><span class="p">)</span>
@@ -16721,13 +16721,13 @@ None
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[57]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -16738,7 +16738,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mystem&quot;</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span> <span class="p">,</span><span class="s2">&quot;nltk.sent_tokenize + Pymorphy</span><span class="se">\n</span><span class="s2">------------------------------------------&quot;</span><span class="p">)</span>
@@ -16796,8 +16796,10 @@ None
 в в
 интернет интернет
 часть часть
+2 2
 статья статья
-ук. ук.
+280 280
+ук &lt;EOS&gt; ук &lt;EOS&gt;
 эксперт эксперт
 <span class="ansi-red-fg">находить найти</span>
 экстремизм экстремизм
@@ -16806,7 +16808,7 @@ None
 видео видео
 на на
 канал канал
-жуков. жуков.
+жуков &lt;EOS&gt; жуков &lt;EOS&gt;
 по по
 <span class="ansi-red-fg">их они</span>
 мнение мнение
@@ -16821,7 +16823,7 @@ None
 вражда вражда
 к к
 действующий действующий
-власть. власть.
+власть &lt;EOS&gt; власть &lt;EOS&gt;
 в в
 заключение заключение
 говориться говориться
@@ -16838,7 +16840,7 @@ None
 источник источник
 зло зло
 и и
-вред. вред.
+вред &lt;EOS&gt; вред &lt;EOS&gt;
 кроме кроме
 <span class="ansi-red-fg">то тот</span>
 студент студент
@@ -16846,7 +16848,7 @@ None
 с с
 этот этот
 власть власть
-бороться. бороться.
+бороться &lt;EOS&gt; бороться &lt;EOS&gt;
 автор автор
 описывать описывать
 катастрофический катастрофический
@@ -16859,7 +16861,7 @@ None
 целенаправленный целенаправленный
 политика политика
 <span class="ansi-red-fg">действовать действующий</span>
-<span class="ansi-red-fg">власть власть.</span>
+власть &lt;EOS&gt; власть &lt;EOS&gt;
 <span class="ansi-red-fg">основной основный</span>
 идеал идеал
 который который
@@ -16890,7 +16892,9 @@ None
 <span class="ansi-red-fg">об о</span>
 итог итог
 митинг митинг
+7 7
 октябрь октябрь
+2017 2017
 год год
 эксперт эксперт
 увидеть увидеть
@@ -16912,12 +16916,12 @@ None
 захват захват
 власть власть
 <span class="ansi-red-fg">вооруженный вооружённый</span>
-мятеж. мятеж.
+мятеж &lt;EOS&gt; мятеж &lt;EOS&gt;
 егор егор
 жуков жуков
 фигурант фигурант
 московский московский
-дело. дело.
+дело &lt;EOS&gt; дело &lt;EOS&gt;
 сначала сначала
 он он
 обвинять обвинять
@@ -16927,8 +16931,10 @@ None
 массовый массовый
 беспорядок беспорядок
 часть часть
+2 2
 статья статья
-ук. ук.
+212 212
+ук &lt;EOS&gt; ук &lt;EOS&gt;
 в в
 суд суд
 говорить говорить
@@ -16944,14 +16950,16 @@ None
 направо направо
 на на
 акция акция
-июль. июль.
+27 27
+июль &lt;EOS&gt; июль &lt;EOS&gt;
 из-за из-за
 <span class="ansi-red-fg">этот это</span>
 студент студент
+2 2
 август август
 <span class="ansi-red-fg">отправлять отправить</span>
 в в
-<span class="ansi-red-fg">сизо. сизый.</span>
+<span class="ansi-red-fg">сизо &lt;EOS&gt; сизый &lt;EOS&gt;</span>
 однако однако
 через через
 месяц месяц
@@ -16969,7 +16977,7 @@ None
 в в
 призыв призыв
 к к
-экстремизм. экстремизм.
+экстремизм &lt;EOS&gt; экстремизм &lt;EOS&gt;
 по по
 ходатайство ходатайство
 следствие следствие
@@ -16978,7 +16986,7 @@ None
 студент студент
 под под
 домашний домашний
-арест. арест.
+арест &lt;EOS&gt; арест &lt;EOS&gt;
 </pre>
 </div>
 </div>
@@ -16991,26 +16999,13 @@ None
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li>Sent tokenize справляется с сегментацией на предложения лучше чем Mystem, который не заметил границу между предложениями "...ненависти или вражды к действующей власти»<strong>.</strong> В заключении..."</li>
-<li>Mystem токенизирует мягко говоря очень подробно: он включает в список токенов знаки препинания и пробелы. Эта проблема решается добавлением регулярки, которая отфильтровывает лишние (не являющиеся словами) токены.</li>
+<li>В соответсвии с данным экспериментом, Mystem и sent_tokenize справляются с парсингом предложений одинаково хорошо. Однако в обёртку pymystem3 не включена возможность включать опцию <code>-s</code> которая выводит маркеры конца предложения. Небольшая модификация pymystem3 позволила это обойти.</li>
+<li>Mystem токенизирует мягко говоря очень подробно: он включает в список токенов знаки препинания и пробелы. Эта проблема решается добавлением регулярки, которая отфильтровывает лишние (не являющиеся словами и цифрами) токены.</li>
 <li>Mystem лучше справляется с лемматизацией глаголов (достигать, становиться), а именно различает их категорию вида и указательных местоимений (то). Так же Mystem лучше лемматизирует фамилии, беря в расчет род имени.</li>
 </ol>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
